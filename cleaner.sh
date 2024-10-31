@@ -23,6 +23,14 @@ apt-get remove --purge -y software-properties-common
 echo "Menghapus paket yang tidak lagi dibutuhkan..."
 apt-get autoremove -y
 
+# Mengecek dan memasang deborphan jika belum ada
+if ! command -v deborphan &> /dev/null
+then
+    echo "deborphan tidak ditemukan. Memasang deborphan..."
+    apt-get update
+    apt-get install -y deborphan
+fi
+
 # Menghapus paket yatim piatu (orphaned packages)
 echo "Menghapus paket yatim piatu..."
 deborphan | xargs sudo apt-get -y remove --purge
