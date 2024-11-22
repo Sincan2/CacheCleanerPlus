@@ -1,5 +1,3 @@
----
-
 # Cache Cleaner Plus
 
 ### **Overview**
