@@ -1,5 +1,3 @@
-Berikut adalah README.md dengan nama repositori **CacheCleanerPlus.git** yang telah disesuaikan:
-
 ---
 
 # Cache Cleaner Plus
